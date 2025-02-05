@@ -19,7 +19,7 @@ return new class extends Migration
 
         Schema::table('alumnos',function(Blueprint $table){
             $table->unsignedBigInteger('equipo_id');
-            $table->foreign('equipo_id')->references('id')->on('equipo');
+            $table->foreign('equipo_id')->references('id')->on('equipos');
         });
     }
 
@@ -28,6 +28,11 @@ return new class extends Migration
      */
     public function down(): void
     {
+        Schema::table('alumnos',function(Blueprint $table){
+            
+            $table->dropForeign('equipo_id');
+            
+        });
         Schema::dropIfExists('equipos');
     }
 };

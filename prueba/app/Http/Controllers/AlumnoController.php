@@ -11,14 +11,16 @@ class AlumnoController extends Controller
     public function addAlumno(){
         
         $a = new Alumno();
-        $dni = "34469276G";
-        $nombre = "Benito Soto";
-        $media = 9.225;
+        $dni = "7894244F";
+        $nombre = "Ashito Aoi";
+        $media = 7.625;
+        $equipo_id = 1;
         
 
         $a->dni = $dni;
         $a->nombre = $nombre;
         $a->media = $media;
+        $a->equipo_id = $equipo_id;
 
         $a->save();
     }

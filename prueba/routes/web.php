@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AlumnoController;
+use App\Http\Controllers\EquipoController;
 use App\Http\Controllers\HolaController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\UserController;
@@ -31,3 +32,6 @@ Route::get('/producto/listar/{id}',[ProductController::class, 'getProduct']);
 Route::get('/alumno/alta',[AlumnoController::class, 'addAlumno']);
 Route::get('/alumno/listar',[AlumnoController::class, 'getAlumnos']);
 Route::get('/alumno/listar/{id}',[AlumnoController::class, 'getAlumno']);
+
+Route::get('/equipo/listar',[EquipoController::class, 'getEquipos']);
+Route::get('/equipo/alta',[EquipoController::class, 'addEquipo']);
